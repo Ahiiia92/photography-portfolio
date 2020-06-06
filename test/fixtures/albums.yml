@@ -4,8 +4,15 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {}
-# column: value
+one:
+  title: "Vacances en Europe"
+  description: "Petit tour européen pour un cours weekend"
+  date: "2019"
+  location: "Danemark"
 #
-two: {}
+two:
+  title: "Vacances aux States"
+  description: "Petit tour américain de quelques semaines"
+  date: "2019"
+  location: "USA"
 # column: value
