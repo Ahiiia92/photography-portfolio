@@ -1,0 +1,71 @@
+<div class="header">
+  <div class="header-inner">
+    <div class="logo-holder">
+      <%= link_to root_path do %>
+      <%= image_tag 'logo-120x120.png' %>
+      <% end %>
+    </div>
+    <div class="nav-button-holder">
+      <div class="nav-button vis-m"><span></span><span></span><span></span></div>
+    </div>
+
+    <div class="nav-holder">
+      <nav>
+        <ul>
+          <li><%= link_to 'Home', root_path %></li>
+          <li><%= link_to 'Portfolio', albums_path %></li>
+          <li><%= link_to 'About Me', about_path %></li>
+          <li><%= link_to 'Contact', contact_path %></li>
+          <li>
+            <a>Admin</a>
+            <ul>
+              <li>
+                <% if current_user.admin? %>
+                <%= link_to 'Dashboard', dashboard_path %>
+                <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+
+                <% else %>
+                <%= link_to 'Login', new_user_session_path %>
+                <% end %>
+              </li>
+            </ul>
+          </li>
+          <!--               <li>
+                  <a>Pages</a>
+                  <ul>
+                      <li>
+                          <a>Home</a>
+                          <ul>
+                              <li><a href="http://outdoor.kwst.net/site/index.html">Slider</a></li>
+                              <li><a href="http://outdoor.kwst.net/site/index2.html">Slideshow</a></li>
+                              <li><a href="http://outdoor.kwst.net/site/index3.html">Multi Slider</a></li>
+                          </ul>
+                      </li>
+                      <li><a href="http://outdoor.kwst.net/site/aboutme.html">About me</a></li>
+                      <li><a href="http://outdoor.kwst.net/site/contact2.html">Contact 2</a></li>
+                      <li>
+                          <a>Portfolio</a>
+                          <ul>
+                              <li><a href="http://outdoor.kwst.net/site/portfolio.html">horizontal</a></li>
+                              <li><a href="http://outdoor.kwst.net/site/portfolio2.html">Masonry</a></li>
+                              <li><a href="http://outdoor.kwst.net/site/portfolio3.html">Grid 3</a></li>
+                          </ul>
+                      </li>
+                      <li>
+                          <a>Portfolio single</a>
+                          <ul>
+                              <li><a href="http://outdoor.kwst.net/site/portfolio-single.html">Style 1</a></li>
+                              <li><a href="http://outdoor.kwst.net/site/portfolio-single2.html">Style 2</a></li>
+                              <li><a href="http://outdoor.kwst.net/site/portfolio-single3.html">Style 3</a></li>
+                              <li><a href="http://outdoor.kwst.net/site/portfolio-single4.html">Style 4</a></li>
+                              <li><a href="http://outdoor.kwst.net/site/portfolio-single5.html">Style 5</a></li>
+                          </ul>
+                      </li>
+                      <li><a href="http://outdoor.kwst.net/site/404.html">404</a></li>
+                  </ul>
+              </li> -->
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
