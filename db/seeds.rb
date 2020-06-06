@@ -1,11 +1,17 @@
-Album.destroy_all
-Photo.destroy_all
+require 'faker'
 
-puts 'Creating 5 photos...'
+Album.destroy_all
+
+puts 'Creating 5 Albums'
 5.times do |i|
-  photo = Photo.create!(
-    url: Faker::Company.name
+  album = Album.create!(
+    title: Faker::Book.title,
+    description: Faker::Lorem.paragraph,
+    city: Faker::Address.city,
+    country: Faker::Address.country,
+    date: Faker::Date.between_except(from: 4.year.ago, to: 1.year.from_now, excepted: Date.today),
+    quote: Faker::Quote.yoda
   )
-  puts "#{i + 1}. #{photo.name}"
+  puts "#{i + 1}. #{album.title} created"
 end
-puts 'Finished!'
+puts "Albums ==> Done"

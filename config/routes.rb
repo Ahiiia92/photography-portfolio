@@ -5,5 +5,7 @@ Rails.application.routes.draw do
   resources :albums
 
   root to: "pages#home"
-    get 'pages/dashboard'
+  get '/contact', to: 'pages#contact'
+  get '/about', to: 'pages#about'
+
 end
