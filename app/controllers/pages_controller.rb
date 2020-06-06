@@ -3,6 +3,9 @@ class PagesController < ApplicationController
   def home
   end
 
-  def dashboard
+  def about
+  end
+
+  def admin
   end
 end
