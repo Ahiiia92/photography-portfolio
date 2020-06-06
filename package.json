@@ -11,5 +11,10 @@
   "version": "0.1.0",
   "devDependencies": {
     "webpack-dev-server": "^3.11.0"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --mode development",
+    "lint": "eslint './src/**/*.js*'",
+    "deploy": "webpack -p && gh-pages -d dist"
   }
 }
