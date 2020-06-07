@@ -36,6 +36,7 @@ group :development, :test do
   gem 'webdrivers', '~> 4.0'
   gem 'launchy'
   gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
+  gem 'dotenv-rails'
 end
 
 group :development do

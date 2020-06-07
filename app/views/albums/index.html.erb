@@ -2,12 +2,12 @@
 <p>Find me in app/views/albums/index.html.erb</p>
 
 <div class="grid">
-  <div><img src="" alt=""></div>
-  <div><img src="" alt=""></div>
-  <div><img src="" alt=""></div>
-  <div><img src="" alt=""></div>
-  <div><img src="" alt=""></div>
+  <%= @albums.each do |album| %>
+    <%= link_to "Specific Album", album_path(@album) |album| do %>
+      <div><img src="" alt=""></div>
+    <% end %>
+  <% end %>
 </div>
 
-pe
-<%= link_to "Specific Album", album_path(@album) %>
+
+
