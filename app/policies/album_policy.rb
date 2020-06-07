@@ -10,7 +10,7 @@ class AlbumPolicy < ApplicationPolicy
   end
 
   def new?
-    return record.user == user
+    return user.admin?
   end
 
   def create?

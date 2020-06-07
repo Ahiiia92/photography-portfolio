@@ -1,0 +1,48 @@
+<div class="content-holder scale-bg2">
+  <div class="display full-height">
+    <!-- title -->
+    <div class="fixed-title">
+      <p>Contact</p>
+    </div>
+    <!-- title end-->
+    <!-- background -->
+    <div class="full-height-wrap fixed-wrap">
+      <div class="bg"
+        style="background-image: url('<%= cl_image_path 'ph-web/ppetmpdup_2_dh2ybu', effect: 'art:daguerre'; %>');">
+        <div class="filter"></div>
+      </div>
+    </div>
+
+    <!-- End Bakcground -->
+    <!-- Content -->
+    <div class="card-inner">
+      <div class="container d-flex justify-content-center"=>
+        <div class="row align-items-center">
+          <div class="col-md-12">
+            <div class="title">
+              <h2>Contact Me</h2>
+            </div>
+            <div class="separator"></div>
+            <div class="quote">
+              <%#= simple_form_for @user do |f| %>
+                <%#= f.input :name %>
+                <%#= f.input :email %>
+                <%#= f.association :message %>
+                <%#= f.button :submit, "Send", class: 'btn btn-secondary w-100' %>
+              <%# end %>
+              <h3>
+                <form method="POST" action="https://simple-form.com/youremail@domain.com">
+                  <input type="text" name="name" placeholder="Your name" />
+                  <input type="email" name="replyTo" placeholder="Your email" />
+                  <textarea name="message" placeholder="Your message"></textarea>
+                  <input type="submit" value="Send" />
+                </form>
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Content -->
+  </div>
+</div>

@@ -1,0 +1,114 @@
+#footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: #fff;
+  z-index: 15;
+  padding: 0 50px;
+  line-height: 50px;
+}
+
+footer {
+  display: block;
+}
+
+.policy-box {
+  float: left;
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: #666;
+
+  ul {
+    position: relative;
+    float: left;
+    margin-left: 10px;
+  }
+
+  span {
+    float: left;
+  }
+
+  li {
+    float: left;
+    list-style: none;
+  }
+}
+
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+abbr,
+img,
+ol,
+ul,
+li,
+form,
+label,
+legend,
+table,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  border: none;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+.fa {
+  display: inline-block;
+}
+
+.fab {
+  display: inline-block;
+  color: #666;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+  position: relative;
+}
+
+.footer-social {
+  float: right;
+  font-size: 13px;
+
+  ol {
+    list-style: none;
+  }
+
+  ul {
+    position: relative;
+    float: right;
+    margin-left: 10px;
+    list-style: none;
+  }
+
+  li {
+    float: left;
+    list-style: none;
+  }
+}
+
+.footer-social li a {
+  padding: 0 8px;
+  font-size: 15px;
+}
