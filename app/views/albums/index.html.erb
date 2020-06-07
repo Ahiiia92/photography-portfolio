@@ -43,13 +43,11 @@
 
             <div class="grid">
               <% @albums.each do |album| %>
-
                 <div>
-
-                    <%= cl_image_tag album.cover.key %>
-
+                  <%= link_to album_path(album) do %>
+                    <%= cl_image_tag album.cover.key, class: "grid-picture" %>
+                  <% end %>
                 </div>
-
               <% end %>
             </div>
           </div>

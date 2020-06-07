@@ -67,15 +67,15 @@
               <div class="btn">
                 <br>
                 <span>
-                  <% if policy(@album).create? %>
-                  <%= link_to "Add Photos", new_album_path(@album), class: "link-album" %>
-                  <% end %>
-                  <% if policy(@album).edit? %>
-                  <%= link_to "Update", edit_album_path(@album), class: "link-album" %>
-                  <% end %>
-                  <% if policy(@album).destroy? %>
-                  <%= link_to "Delete Album", album_path(@album), class: "link-album", method: :delete %>
-                  <% end %>
+                  <%# if policy(@album).create? %>
+                  <%#= link_to "Add Photos", new_album_path(@album), class: "link-album" %>
+                  <%# end %>
+                  <%# if policy(@album).edit? %>
+                  <%#= link_to "Update", edit_album_path(@album), class: "link-album" %>
+                  <%# end %>
+                  <%# if policy(@album).destroy? %>
+                  <%#= link_to "Delete Album", album_path(@album), class: "link-album", method: :delete %>
+                  <%# end %>
                 </span>
               </div>
             </div>
