@@ -10,11 +10,15 @@
 }
 
 .header-inner {
-  float: left;
+  // float: left;
   width: 100%;
-  padding: 0 50px;
+  // padding: 0 50px;
   padding-top: 10px;
   position: relative;
+}
+
+.navbar-collapse {
+  flex-grow: 0;
 }
 
 .logo-holder {
@@ -165,4 +169,11 @@ nav li ul a.act-link {
   background: #000;
   margin-bottom: 2px;
   position: relative;
+}
+
+#navbarSupportedContent {
+  float: right;
+  right: 2rem;
+  position: fixed;
+  top: 1rem;
 }

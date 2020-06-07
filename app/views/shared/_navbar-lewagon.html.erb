@@ -1,8 +1,8 @@
 <div class="header">
   <div class="header-inner">
-    <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-      <%= link_to root_path, class: "navbar-brand" do %>
-      <%= image_tag "logo-120x120-round.png" %>
+    <div class="navbar navbar-expand-sm navbar-light header-inner">
+      <%= link_to root_path, class: "logo-holder" do %>
+        <%= image_tag "logo-120x120-round.png" %>
       <% end %>
 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -23,18 +23,14 @@
             <li><%= link_to 'Contact', contact_path, class: "nav-link" %></li>
             </li>
             <li class="nav-item dropdown">
-              <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                <% if current_user %>
-                <%= link_to 'Dashboard', rails_admin_path, class: "dropdown-item" %>
-                <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-              </div>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              id= "navbarDropdown"
+                aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"
+                aria-haspopup= "true">
+                <!-- <span class="navbar-toggler-icon"></span> -->
+              </button>
             </li>
-            <% else %>
-            <li class="nav-item">
-              <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-            </li>
-            <% end %>
           </ul>
         </nav>
 
