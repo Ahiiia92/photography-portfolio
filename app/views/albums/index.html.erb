@@ -19,7 +19,7 @@
           <div class="container">
             <!--  portfolio header -->
             <div class="content-logo">
-              <%= image_tag 'logo-400x400-b&w.png' %>
+              <%= image_tag 'logo-120x120-round.png' %>
             </div>
             <h1>Portfolio</h1>
             <div class="block">
@@ -43,27 +43,15 @@
 
             <div class="grid">
               <% @albums.each do |album| %>
-              <div class="gallery-item">
-                <div class="grid-item-holder">
-                  <%= link_to album_path(album) do %>
-                  <div class="box-item">
-                    <span class="overlay"></span>
-                    <% if album.cover.attached? %>
-                    <%= cl_image_tag album.cover.key %>
-                    <% else %>
-                    <%= cl_image_tag 'ph-web/4_pzqq2d' %>
-                    <% end %>
-                  </div>
-                  <% end %>
 
-                  <div class="grid-item ">
-                    <h3><%= link_to album.title, album_path(album), class:'ajax portfolio-link' %></h3>
-                  </div>
+                <div>
+
+                    <%= cl_image_tag album.cover.key %>
+
                 </div>
-              </div>
+
               <% end %>
             </div>
-
           </div>
         </section>
       </div>

@@ -1,0 +1,18 @@
+<% if  @album.cover.attached? %>
+<% uploaded_image = cl_image_path @album.cover.key %>
+<% else %>
+<% uploaded_image = cl_image_path 'ph-web/4_pzqq2d' %>
+<% end %>
+
+<div class="banner"
+  style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= uploaded_image %>);">
+  <div class="container">
+    <h1><%= @album.title %></h1>
+    <h3><%= @album.description %></h3>
+    <p>
+      <%# @album.cat_types.each do |tag| %>
+      <%#= tag.category.name %>
+      <%# end %>
+    </p>
+  </div>
+</div>

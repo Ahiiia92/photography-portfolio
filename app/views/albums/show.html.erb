@@ -4,3 +4,90 @@
 <% @album.photos.each do |photo| %>
   <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
 <% end %>
+
+<div class="content-holder scale-bg2">
+  <div class="display full-height">
+    <!-- title -->
+    <div class="fixed-title">
+      <p><%= @album.title %></p>
+    </div>
+    <!-- portfolio counter -->
+    <div class="count-folio cdc" style="top: 50%; margin-top: -42px;">
+      <div class="num-album"><%= @album.id %></div>
+      <div class="all-album"><%= Album.count %></div>
+    </div>
+    <!-- portfolio counter  end-->
+
+    <!--=============== content ===============-->
+    <div class="content">
+      <%= render 'shared/banner' %>
+
+      <div class="container d-flex justify-content-center">
+        <div class="row align-items-center justify-content-between p-3">
+          <div class="col-sm-12 col-7 col-lg-8 album-show">
+            <div class="card-photo">
+              <h3>Photo</h3>
+              <%#= cl_image_tag @album.image.key %>
+
+              <ul class="list-inline">
+                <% @album.photos.each do |image| %>
+                <li class="list-inline-item"><%= cl_image_tag image.key %></li>
+                <%end %>
+                <li class="list-inline-item"><%= cl_image_tag 'ph-web/IMG_6060_polarr_od7lxq' %></li>
+                <li class="list-inline-item"><%= cl_image_tag 'ph-web/Z51dbYxA9A8A2NWL9TkfJxoB' %></li>
+                <li class="list-inline-item"><%= cl_image_tag 'ph-web/berlin.jpg' %></li>
+                <li class="list-inline-item"><%= cl_image_tag 'ph-web/ADroQgdoGFWDKLFsAnjf3YFe' %></li>
+                <br>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-sm-12 col-5 col-lg-4 album-show h-100">
+            <div class="card-photo-infos">
+              <h3>Details</h3>
+              <p><%= @album.description %></p>
+              <div class="card-photo-infos-info">
+                <h3>Info</h3>
+                <ul class="project-details">
+                  <li><i class="fas fa-hashtag"></i>
+                    <h5 class="card-photo-infos-list">Category:
+                      <%# @album.cat_types.each do |tag| %>
+                        <%#= tag.category.name %>
+                      <%# end %>
+                    </h5>
+                  </li>
+                  <li><i class="far fa-calendar-alt"></i>
+                    <h5 class="card-photo-infos-list">Date: </h5>
+                  </li>
+                  <li><i class="far fa-map"></i>
+                    <h5 class="card-photo-infos-list">Location: </h5>
+                  </li>
+                </ul>
+              </div>
+              <div class="btn">
+                <br>
+                <span>
+                  <% if policy(@album).create? %>
+                  <%= link_to "Add Photos", new_album_path(@album), class: "link-album" %>
+                  <% end %>
+                  <% if policy(@album).edit? %>
+                  <%= link_to "Update", edit_album_path(@album), class: "link-album" %>
+                  <% end %>
+                  <% if policy(@album).destroy? %>
+                  <%= link_to "Delete Album", album_path(@album), class: "link-album", method: :delete %>
+                  <% end %>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </section>
+    </div>
+    <!-- Content end  -->
+  </div>
+  <!-- content holder end -->
+</div>
+<!-- wrapper end -->
+<div class="left-decor"></div>
+<div class="right-decor"></div>
