@@ -8,7 +8,7 @@ gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 4.1'
 gem 'sass-rails', '>= 6'
 gem 'webpacker', '~> 4.0'
-gem 'turbolinks', '~> 5'
+gem 'bootstrap'
 gem 'jbuilder', '~> 2.7'
 gem 'devise'
 gem 'cloudinary', '~> 1.12.0'
@@ -28,8 +28,6 @@ gem 'bootsnap', '>= 1.4.2', require: false
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 gem 'turbolinks_render'
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.5'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

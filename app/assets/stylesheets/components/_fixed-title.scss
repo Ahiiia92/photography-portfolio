@@ -1,0 +1,41 @@
+.fixed-title:hover::after {
+  height: 0;
+}
+
+.fixed-title::after {
+  content: '';
+  position: absolute;
+  bottom: 46px;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  transition: all 200ms linear;
+  // height: 160px;
+  background: #313131;
+}
+
+.fixed-title {
+  background-color: #313131;
+  height: 60px;
+  z-index: 12;
+  position: relative;
+  width: 190px;
+  cursor: default;
+  color: #fff;
+  transform: rotate(-90deg);
+  text-align: center;
+  text-transform: uppercase;
+  top: 60%;
+  margin-left: -34px;
+  font-size: 14px;
+  letter-spacing: 0.17em;
+  transform-origin: left top;
+  text-align: center;
+}
+
+.fixed-title p {
+  position: relative;
+  z-index: 3;
+  font-family: Raleway;
+  padding-top: 20px;
+}

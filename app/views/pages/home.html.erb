@@ -1,3 +1,22 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-<%= link_to "Albums", albums_path %>
+<div class="content-holder scale-bg2">
+  <div class="display full-height">
+    <!-- title -->
+    <div class="fixed-title">
+      <p>Home</p>
+    </div>
+    <!-- title end-->
+    <!-- portfolio counter -->
+    <div class="count-folio cdc" style="top: 50%; margin-top: -42px;">
+      <div class="num-album"><a href="#carouselExampleIndicators" role="button" data-slide="next"><i
+            class="fas fa-chevron-right"></i></a></div>
+      <div class="all-album"><a href="#carouselExampleIndicators" role="button" data-slide="prev"><i
+            class="fas fa-chevron-left"></i></a></div>
+    </div>
+    <!-- portfolio counter  end-->
+    <div class="full-height-wrap fixed-wrap">
+      <div class="bg">
+        <%= render 'shared/carousel' %>
+      </div>
+    </div>
+  </div>
+</div>

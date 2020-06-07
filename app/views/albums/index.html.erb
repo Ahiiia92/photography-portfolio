@@ -1,11 +1,76 @@
-<h1>Portfolio</h1>
-<p>Find me in app/views/albums/index.html.erb</p>
 
-<div class="grid">
-  <%= @albums.each do |album| %>
-    <div>
-      <%= cl_image_tag album.cover.key, height: 300, width: 400, crop: :fill %>
+
+  <div id="wrapper">
+    <div class="content-holder elem scale-bg2 transition3">
+      <!-- title -->
+      <div class="fixed-title">
+        <p>Portfolio</p>
+      </div>
+      <!-- portfolio counter -->
+      <div class="count-folio cdc" style="top: 50%; margin-top: -42px;">
+        <div class="num-album"><%= Album.count %></div>
+        <div class="all-album"><%= Album.count %></div>
+      </div>
+      <!-- portfolio counter  end-->
+
+      <!--=============== content ===============-->
+      <div class="content">
+        <section>
+          <div class="container">
+            <!--  portfolio header -->
+            <div class="content-logo">
+              <%= image_tag 'logo-400x400-b&w.png' %>
+            </div>
+            <h1>Portfolio</h1>
+            <div class="block">
+              <div class="content">
+                <h3 class="subtitle js-excerpt excerpt-hidden" style="color:#000; margin: 10px 25px;">Cat ipsum dolor sit
+                  amet, vommit food and eat it again so catch eat throw up catch eat throw up bad birds stares at human
+                  while pushing stuff off a table eat owner's food. Always ensure to lay down in such a manner that tail
+                  can lightly brush human's nose stare out the window. Find a way to fit in tiny box flop over, so dead
+                  stare with ears cocked but experiences short bursts of poo-phoria after going to the loo and
+                  ccccccccccccaaaaaaaaaaaaaaatttttttttttttttttssssssssssssssss but sleep in the bathroom sink cat mojo .
+                  Meow ask to be pet then attack owners hand for enslave the hooman. Roll over and sun my belly stinky
+                  cat. Refuse to drink water except out of someone's glass always ensure to lay down in such a manner that
+                  tail can lightly brush human's nose but i will be pet i will be pet and then i will hiss or cats
+                  secretly make all the worlds muffins kitty kitty for chew master's slippers. Find empty spot in cupboard
+                  and sleep all day you call this cat food and stare at guinea pigs but find a way to fit in tiny box or
+                  give me some of your food give me some of your food give me some of your food meh, i don't want it.
+                </h3>
+              </div>
+              <a role="button" class="js-read-more" href="#">Read More</a>
+            </div>
+
+            <div class="grid">
+              <% @albums.each do |album| %>
+              <div class="gallery-item">
+                <div class="grid-item-holder">
+                  <%= link_to album_path(album) do %>
+                  <div class="box-item">
+                    <span class="overlay"></span>
+                    <% if album.cover.attached? %>
+                    <%= cl_image_tag album.cover.key %>
+                    <% else %>
+                    <%= cl_image_tag 'ph-web/4_pzqq2d' %>
+                    <% end %>
+                  </div>
+                  <% end %>
+
+                  <div class="grid-item ">
+                    <h3><%= link_to album.title, album_path(album), class:'ajax portfolio-link' %></h3>
+                  </div>
+                </div>
+              </div>
+              <% end %>
+            </div>
+
+          </div>
+        </section>
+      </div>
+      <!-- Content end  -->
     </div>
-  <% end %>
-</div>
-
+    <!-- content holder end -->
+  </div>
+  <!-- wrapper end -->
+  <div class="left-decor"></div>
+  <div class="right-decor"></div>

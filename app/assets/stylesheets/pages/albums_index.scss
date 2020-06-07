@@ -1,0 +1,284 @@
+// Place all the styles related to the Albums controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.content-holder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  height: 100%;
+  padding: 50px;
+}
+
+.content {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  float: left;
+  background: #f9f9f9;
+}
+
+section {
+  float: left;
+  width: 100%;
+  position: relative;
+  // padding: 90px 0;
+  background: #f9f9f9;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+.container {
+  // max-width: 1024px;
+  width: 92%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+
+  h1 {
+    font-family: 'Raleway';
+    font-weight: bold;
+    font-size: 42px;
+  }
+}
+
+.content-logo {
+  margin-bottom: 20px;
+  opacity: 0.8;
+
+  img {
+    vertical-align: middle;
+    border-style: none;
+    border-radius: 50%;
+    width: 15%;
+    margin: 0 auto;
+  }
+}
+
+.separator-album {
+  margin: 0 auto;
+  width: 70px;
+  height: 20px;
+  margin: 10px auto 10px;
+
+  .separator-image {
+    background: none;
+    width: auto;
+  }
+
+  img {
+    vertical-align: middle;
+  }
+}
+
+.subtitle {
+  font-size: 16px;
+  font-style: italic;
+  font-family: Arapey, "Times New Roman", Times, serif;
+  padding-top: 12px;
+  opacity: 0.8;
+}
+
+.inline-filters::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  height: 1px;
+  background: #ccc;
+  left: 50%;
+  width: 10px;
+  margin-left: -60px;
+}
+
+.inline-filters {
+  float: left;
+  width: 100%;
+  padding: 30px 0;
+  margin: 20px 0 0;
+  position: relative;
+}
+
+.inline-filters a {
+  display: inline-block;
+  padding: 10px 18px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #666;
+  margin: 0 5px;
+}
+
+.gallery-item {
+  float: left;
+  width: 100%;
+  padding-bottom: 50px;
+}
+
+.three-coulms .gallery-item,
+.three-coulms .grid-sizer {
+  width: 30%;
+}
+
+.gallery-items .grid-big-pad .three-coulms .vis-port-info {
+  position: relative;
+  height: 100%;
+  padding: 0 20px;
+}
+
+.grid-big-pad .grid-item-holder {
+  padding: 20px;
+}
+
+.grid-item-holder {
+  float: left;
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.box-item {
+  float: left;
+  width: 100%;
+}
+
+.box-item a .overlay {
+  opacity: 0;
+  z-index: 2;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+}
+
+.box-item a img {
+  position: relative;
+  z-index: 1;
+}
+
+.box-item a {
+  float: left;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  position: relative;
+}
+
+.grid-item {
+  position: absolute;
+  width: 100%;
+  z-index: 3;
+  top: 50%;
+  left: 0;
+}
+
+.vis-port-info .grid-item {
+  position: relative;
+  float: left;
+  top: 0;
+  margin-top: 0 !important;
+  color: #000;
+  padding: 20px 0;
+}
+
+.grid-item h3 {
+  font-size: 12px;
+  text-transform: uppercase;
+  // font-weight: 700;
+  position: relative;
+  float: left;
+  width: 100%;
+  font-family: 'Arapey';
+  color: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.gallery-item img,
+.grid-sizer img {
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.fixed-filter a.gallery-filter-active,
+.vis-filter a.gallery-filter-active,
+.inline-filters a.gallery-filter-active {
+  text-decoration: line-through;
+}
+
+.vis-port-info .grid-item span {
+  font-size: 14px;
+  font-style: italic;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  padding-top: 10px;
+  color: #666;
+  display: block;
+  position: relative;
+}
+
+.vis-port-info .grid-item h3,
+.vis-port-info .grid-item span {
+  opacity: 1;
+}
+
+.left-decor::after,
+.right-decor::after {
+  bottom: 50px;
+}
+
+.left-decor,
+.right-decor,
+.fixed-wrap::before,
+.fixed-wrap::after {
+  position: fixed;
+  width: 50px;
+  height: 100%;
+  background: #fff;
+  z-index: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+}
+
+.left-decor::before,
+.right-decor::before,
+.left-decor::after,
+.right-decor::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  left: 10px;
+  height: 1px;
+  background: #eee;
+}
+
+.left-decor::before,
+.right-decor::before {
+  top: 70px;
+}
