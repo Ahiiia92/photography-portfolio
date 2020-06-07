@@ -23,4 +23,10 @@ class AlbumsController < ApplicationController
 
   def destroy
   end
+
+  private
+
+  def article_params
+    params.require(:album).permit(:title, :date, :city, :country, :quote,:description, :cover, photos: [])
+  end
 end
