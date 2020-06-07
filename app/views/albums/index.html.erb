@@ -4,7 +4,7 @@
 <div class="grid">
   <%= @albums.each do |album| %>
     <%= link_to "Specific Album", album_path(@album) |album| do %>
-      <div><img src="" alt=""></div>
+      <div><%= cl_image_path @album.cover.key, height: 300, width: 400, crop: :fill %></div>
     <% end %>
   <% end %>
 </div>
