@@ -1,9 +1,12 @@
 // Import Google fonts
-@import url('https://fonts.googleapis.com/css?family=Arapey|Raleway:300&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&family=Raleway:wght@300;500;700&display=swap');
 // Define fonts for body and headers
-$body-font: "Arapey", "Georgia", "sans-serif";
-$headers-font: "Raleway", "Helvetica", "sans-serif";
+$body-font: "Arapey",
+"Georgia",
+"serif";
+$headers-font: "Raleway",
+"Helvetica",
+"sans-serif";
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {
@@ -14,6 +17,12 @@ $headers-font: "Raleway", "Helvetica", "sans-serif";
 //        font-url('FontFile.ttf') format('truetype')
 // }
 // $my-font: "Font Name";
+
+h2 {
+  font-family: Raleway !important;
+  font-size: 2rem !important;
+  font-weight: bold;
+}
 
 h3 {
   font-family: Raleway;

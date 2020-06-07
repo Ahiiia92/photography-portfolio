@@ -1,0 +1,100 @@
+.btn-action-plus {
+  position: absolute;
+  opacity: 0.6;
+  text-align: center;
+  line-height: 52px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  bottom: 9vh;
+  left: 3vh;
+  background: white;
+  z-index: 10;
+  // img {
+  //   position: relative;
+  //   height: 30px;
+  //   left: 1px;
+  //   bottom: 3px;
+  //   width: 30px;
+  // }
+  // a {
+  //   z-index: 15;
+  // }
+}
+
+.btn-action-edit {
+  position: absolute;
+  opacity: 0.6;
+  text-align: center;
+  line-height: 52px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  bottom: 9vh;
+  left: 9vh;
+  background: white;
+  z-index: 10;
+  // img {
+  //   position: relative;
+  //   height: 30px;
+  //   left: 1px;
+  //   bottom: 3px;
+  //   width: 30px;
+  // }
+  // a {
+  //   z-index: 15;
+  // }
+}
+
+.btn-action-delete {
+  position: absolute;
+  opacity: 0.6;
+  text-align: center;
+  line-height: 52px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  bottom: 9vh;
+  left: 15vh;
+  background: white;
+  z-index: 10;
+  // img {
+  //   position: relative;
+  //   height: 30px;
+  //   left: 1px;
+  //   bottom: 3px;
+  //   width: 30px;
+  // }
+  // a {
+  //   z-index: 15;
+  // }
+}
+
+
+.btn-action-delete,
+.btn-action-edit,
+.btn-action-plus {
+  img {
+    position: relative;
+    height: 30px;
+    left: 1px;
+    top: 10px;
+    width: 30px;
+  }
+
+  a {
+    z-index: 15;
+  }
+}
+
+.num-album i {
+  color: $gray-font;
+}
+
+.all-album i {
+  color: $gray-font;
+}
+
+.btn {
+  margin-bottom: 15px;
+}
