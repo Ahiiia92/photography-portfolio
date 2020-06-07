@@ -3,7 +3,9 @@
 
 <div class="grid">
   <%= @albums.each do |album| %>
-    <%= cl_image_path album.cover.key, height: 300, width: 400, crop: :fill %>
+    <div>
+      <%= cl_image_tag album.cover.key, height: 300, width: 400, crop: :fill %>
+    </div>
   <% end %>
 </div>
 
