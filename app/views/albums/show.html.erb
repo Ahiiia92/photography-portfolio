@@ -27,11 +27,9 @@
           <div class="col-sm-12 col-7 col-lg-8 album-show">
             <div class="card-photo">
               <h3>Photo</h3>
-              <%#= cl_image_tag @album.image.key %>
-
               <ul class="list-inline">
                 <% @album.photos.each do |image| %>
-                <li class="list-inline-item"><%= cl_image_tag image.key %></li>
+                  <li class="list-inline-item"><%= cl_image_tag image.key %></li>
                 <%end %>
                 <li class="list-inline-item"><%= cl_image_tag 'ph-web/IMG_6060_polarr_od7lxq' %></li>
                 <li class="list-inline-item"><%= cl_image_tag 'ph-web/Z51dbYxA9A8A2NWL9TkfJxoB' %></li>
@@ -57,26 +55,12 @@
                     </h5>
                   </li>
                   <li><i class="far fa-calendar-alt"></i>
-                    <h5 class="card-photo-infos-list">Date: </h5>
+                    <h5 class="card-photo-infos-list"><%= @album.date.strftime("%b %Y") %></h5>
                   </li>
                   <li><i class="far fa-map"></i>
-                    <h5 class="card-photo-infos-list">Location: </h5>
+                    <h5 class="card-photo-infos-list"><%= @album.city %>, <%= @album.country %> </h5>
                   </li>
                 </ul>
-              </div>
-              <div class="btn">
-                <br>
-                <span>
-                  <%# if policy(@album).create? %>
-                  <%#= link_to "Add Photos", new_album_path(@album), class: "link-album" %>
-                  <%# end %>
-                  <%# if policy(@album).edit? %>
-                  <%#= link_to "Update", edit_album_path(@album), class: "link-album" %>
-                  <%# end %>
-                  <%# if policy(@album).destroy? %>
-                  <%#= link_to "Delete Album", album_path(@album), class: "link-album", method: :delete %>
-                  <%# end %>
-                </span>
               </div>
             </div>
           </div>
