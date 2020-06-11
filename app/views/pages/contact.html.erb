@@ -24,14 +24,14 @@
             </div>
             <div class="separator"></div>
             <div class="quote">
-              <%#= simple_form_for @user do |f| %>
+              <%#= simple_form_for (@user, remote: true) do |f| %>
                 <%#= f.input :name %>
                 <%#= f.input :email %>
                 <%#= f.association :message %>
                 <%#= f.button :submit, "Send", class: 'btn btn-secondary w-100' %>
               <%# end %>
               <h3>
-                <form method="POST" action="https://simple-form.com/youremail@domain.com">
+                <form method="POST" action="https://simple-form.com/youremail@domain.com" >
                   <input type="text" name="name" placeholder="Your name" />
                   <input type="email" name="replyTo" placeholder="Your email" />
                   <textarea name="message" placeholder="Your message"></textarea>

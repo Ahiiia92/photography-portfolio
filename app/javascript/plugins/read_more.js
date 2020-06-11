@@ -1,16 +1,17 @@
-function readMore() {
+const readMore = () => {
   const button = document.querySelector('.js-read-more');
   const excerpt = document.querySelector('.js-excerpt');
 
   if (button) {
-    button.addEventListener("click", () => {
-      if (excerpt.classList.contains("excerpt-hidden")) {
-        excerpt.classList.add("excerpt-visible");
-        excerpt.classList.remove("excerpt-hidden");
+    button.addEventListener("click", (event) => {
+      event.preventDefault();
+      if (event.classList.contains("excerpt-hidden")) {
+        event.currentTarget.classList.add("excerpt-visible");
+        event.currentTarget.classList.remove("excerpt-hidden");
         button.text = "Read Less";
       } else {
-        excerpt.classList.add("excerpt-hidden");
-        excerpt.classList.remove("excerpt-visible");
+        event.currentTarget.classList.add("excerpt-hidden");
+        event.currentTarget.classList.remove("excerpt-visible");
         button.text = "Read More";
       }
     });
