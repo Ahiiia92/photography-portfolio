@@ -1,5 +1,6 @@
 <div class="content-holder scale-bg2">
-  <div class="display full-height">
+  <!-- <div class="display full-height"> -->
+        <%= render 'shared/banner' %>
     <!-- title -->
     <div class="fixed-title">
       <p><%= @album.title %></p>
@@ -13,10 +14,8 @@
 
     <!--=============== content ===============-->
     <div class="content">
-      <%= render 'shared/banner' %>
-
       <div class="container gallery-show d-flex justify-content-center">
-        <div class="row align-items-center justify-content-between p-3">
+        <div class="row align-items-center justify-content-between">
           <div class="col-sm-12 col-7 col-lg-8 album-show">
             <div class="card-photo">
               <h3>Photo</h3>
@@ -63,7 +62,7 @@
       </section>
     </div>
     <!-- Content end  -->
-  </div>
+  <!-- </div> -->
   <!-- content holder end -->
 </div>
 <!-- wrapper end -->

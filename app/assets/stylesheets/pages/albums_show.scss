@@ -5,17 +5,18 @@
   padding: 30px;
   box-shadow: 1px 1px 30px 1px rgba(0, 0, 0, 0.04);
   border-radius: 4px;
+  margin-bottom: 50px;
+}
 
-  h3 {
-    float: left;
-    width: 100%;
-    text-align: left;
-    padding-bottom: 20px;
-    font-size: 24px;
-    color: #666;
-    font-family: 'Raleway';
-    letter-spacing: 1px;
-  }
+h3 {
+  float: left;
+  width: 100%;
+  text-align: left;
+  padding-bottom: 20px;
+  font-size: 24px;
+  color: #666;
+  font-family: 'Raleway';
+  letter-spacing: 1px;
 }
 
 .card-photo-infos {
@@ -26,6 +27,8 @@
   padding: 30px 20px;
   box-shadow: 1px 1px 30px 1px rgba(0, 0, 0, 0.04);
   border-radius: 4px;
+  position: sticky;
+  top: 90px;
 
   p {
     padding-bottom: 20px;
@@ -78,6 +81,10 @@
   padding-top: 20px;
   font-family: Arapey;
   font-size: 1rem;
+
+  &:hover {
+    color: #000;
+  }
 }
 
 .project-details {
@@ -122,9 +129,8 @@
   width: 100%
 }
 
-
-@media (min-width: 1200px) {
-  .gallery-show {
-    max-width: 1576px;
+  @media (min-width: 1200px) {
+    .gallery-show {
+      max-width: 1576px;
+    }
   }
-}
