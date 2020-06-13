@@ -29,7 +29,8 @@
 
   p {
     padding-bottom: 20px;
-    font-size: 14px;
+    font-size: 1rem;
+    font-family: Arapey;
   }
 }
 
@@ -73,6 +74,12 @@
   }
 }
 
+.card-photo-infos-info>a {
+  padding-top: 20px;
+  font-family: Arapey;
+  font-size: 1rem;
+}
+
 .project-details {
   float: left;
   width: 100%;
@@ -88,6 +95,7 @@
     position: relative;
     text-decoration: none;
     list-style: none;
+    font-family: Arapey;
   }
 }
 
