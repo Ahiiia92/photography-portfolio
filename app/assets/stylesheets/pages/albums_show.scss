@@ -3,7 +3,8 @@
   background-color: white;
   margin: 15px auto;
   padding: 30px;
-  box-shadow: 5px 5px 30px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 1px 30px 1px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
 
   h3 {
     float: left;
@@ -22,8 +23,9 @@
   background-color: white;
   // height: 90%;
   margin: 15px auto;
-  padding: 30px;
-  box-shadow: 5px 5px 30px 1px rgba(0, 0, 0, .1);
+  padding: 30px 20px;
+  box-shadow: 1px 1px 30px 1px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
 
   p {
     padding-bottom: 20px;
@@ -106,4 +108,15 @@
 
 .link-album {
   padding: 0 0.7em;
+}
+
+.gallery-show {
+  width: 100%
+}
+
+
+@media (min-width: 1200px) {
+  .gallery-show {
+    max-width: 1576px;
+  }
 }
