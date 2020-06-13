@@ -26,12 +26,12 @@
   <div class="loader" style="display: none;"><i class="fa fa-refresh fa-spin"></i></div>
   <!--=============== Favicons END ===============-->
 
-  <title><%= content_for?(:title) ? yield(:title) : "Photography Portfolio" %></title>
+  <title>Maroussia Arnault | Photography Portfolio</title>
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
 
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
 </head>
 
 <body>

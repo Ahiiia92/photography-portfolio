@@ -8,10 +8,12 @@ function readMore() {
         excerpt.classList.add("excerpt-visible");
         excerpt.classList.remove("excerpt-hidden");
         button.text = "Read Less";
+        console.log('expanding');
       } else {
         excerpt.classList.add("excerpt-hidden");
         excerpt.classList.remove("excerpt-visible");
         button.text = "Read More";
+        console.log('reducing');
       }
     });
   }

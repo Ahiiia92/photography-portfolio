@@ -2,7 +2,7 @@
 import 'bootstrap';
 
 // Internal libraries
-import { readMore } from '../plugins/read_more';
+//  import { readMore } from '../plugins/read_more';
 
 // This file is automatically compiled by Webpack, along with any other files
 // present in this directory. You're encouraged to place your actual application logic in
@@ -22,4 +22,6 @@ require("channels")
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
-readMore();
+document.addEventListener('turbolinks:load', () => {
+  // readMore();
+});
