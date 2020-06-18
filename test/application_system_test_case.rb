@@ -1,5 +1,5 @@
 require 'test_helper'
 
 class ApplicationSystemTestCase < ActionDispatch::SystemTestCase
-  driven_by :headless_chrome, using: :chrome, screen_size: [1280, 720]
+  driven_by :headless_chrome
 end
