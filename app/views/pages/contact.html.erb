@@ -31,11 +31,21 @@
                 <%#= f.button :submit, "Send", class: 'btn btn-secondary w-100' %>
               <%# end %>
               <h3>
-                <form method="POST" action="https://simple-form.com/youremail@domain.com">
-                  <input type="text" name="name" placeholder="Your name" />
-                  <input type="email" name="replyTo" placeholder="Your email" />
-                  <textarea name="message" placeholder="Your message"></textarea>
-                  <input type="submit" value="Send" />
+                <form action="https://formspree.io/xdowlqkr" method="POST">
+                  <div class="row">
+                    <div class="col-sm-6 form-group">
+                      <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                    </div>
+                    <div class="col-sm-6 form-group">
+                      <input class="form-control" id="email" name="_replyto" placeholder="Email" type="email" required>
+                    </div>
+                  </div>
+                  <textarea class="form-control" id="comments" name="comments" placeholder="Message" rows="5"></textarea>
+                  <div class="row pt-3">
+                    <div class="col-md-12 form-group">
+                      <button class="btn btn-secondary w-100" type="submit" value="Send">Send</button>
+                    </div>
+                  </div>
                 </form>
               </h3>
             </div>
