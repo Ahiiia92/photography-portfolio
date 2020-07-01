@@ -17,6 +17,7 @@ h3 {
   color: #666;
   font-family: 'Raleway';
   letter-spacing: 1px;
+  text-align: center;
 }
 
 .card-photo-infos {
@@ -129,8 +130,8 @@ h3 {
   width: 100%
 }
 
-  @media (min-width: 1200px) {
-    .gallery-show {
-      max-width: 1576px;
-    }
+@media (min-width: 1200px) {
+  .gallery-show {
+    max-width: 1576px;
   }
+}
