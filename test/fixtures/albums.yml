@@ -8,11 +8,16 @@ one:
   title: "Vacances en Europe"
   description: "Petit tour européen pour un cours weekend"
   date: "2019"
-  location: "Danemark"
+  country: "Danemark"
+  city: "Copenhaguen"
+  quote: "<%= Faker::Quote.most_interesting_man_in_the_world %>"
 #
 two:
   title: "Vacances aux States"
   description: "Petit tour américain de quelques semaines"
   date: "2019"
-  location: "USA"
+  country: "USA"
+  city: "New York City"
+  quote: "<%= Faker::Quote.most_interesting_man_in_the_world %>"
+
 # column: value
