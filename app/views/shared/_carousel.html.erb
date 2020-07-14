@@ -12,7 +12,9 @@
       <%= cl_image_tag 'ph-web/IMG_6138_polarr_rxfcpg', class: "d-block w-100", alt: "First slide" %>
     </div>
     <div class="carousel-item">
-      <%= cl_image_tag 'ph-web/IMG_3564_llcmqu', class: "d-block w-100", alt: "Second slide" %>
+      <%= link_to album_path(@album) do %>
+        <%= cl_image_tag @album.cover.key, class: "d-block w-100", alt: "Second slide" %>
+      <<% end %>
     </div>
     <div class="carousel-item">
       <%= cl_image_tag 'ph-web/ppetmpdup_2_dh2ybu', class: "d-block w-100", alt: "Third slide" %>
