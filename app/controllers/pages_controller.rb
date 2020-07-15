@@ -2,8 +2,8 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :home, :about, :contact]
 
   def home
-    # @albums = Album.all
-    @album = Album.find(33)
+    @albums = policy_scope(Album).order(created_at: :desc)
+    #@album = Album.find(params[:id])
     # @cover = @album.cover
   end
 

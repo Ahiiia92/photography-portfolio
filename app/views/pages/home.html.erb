@@ -3,6 +3,7 @@
     <!-- title -->
     <div class="fixed-title">
       <p>Home</p>
+      <p><%= @albums.first.title %></p>
     </div>
     <!-- title end-->
     <!-- portfolio counter -->
@@ -15,7 +16,7 @@
     <!-- portfolio counter  end-->
     <div class="full-height-wrap fixed-wrap">
       <div class="bg">
-        <%= render 'shared/carousel', locals: { album: @album } %>
+        <%= render partial: 'shared/carousel', locals: { album: @albums } %>
       </div>
     </div>
   </div>
