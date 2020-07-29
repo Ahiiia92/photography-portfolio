@@ -46,13 +46,14 @@
                   <%= link_to album_path(album) do %>
                     <%= cl_image_tag album.cover.key, class: "grid-picture" %>
                     <div class="card-index-info">
-                      <h3><%= album.title.truncate(15) %></h3>
-                      <p><%= album.description.truncate(27) %></p>
+                      <h3><%= album.title.truncate(20) %></h3>
+                      <p><%= album.description.truncate(150) %></p>
                       <!-- <button>More</button> -->
                     </div>
                   <% end %>
                 </div>
               <% end %>
+
                   <!-- <% @albums.each do |album| %>
                   <div class="card-bottom">
                     <%= link_to album_path(album) do %>
