@@ -1,31 +1,27 @@
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  </ol>
-
+    <ol class="carousel-indicators">
+      <% @albums.each_with_index do |album, index| %>
+        <li data-target="#carouselExampleIndicators" data-slide-to="<%= index %>" class="<%= index.zero? ? 'active' : '' %>"></li>
+      <% end %>
+    </ol>
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
-    <% @albums.each do |album| %>
-      <div class="carousel-item active">
+    <% @albums.each_with_index do |album, index| %>
+      <div class="carousel-item <%= index == 0 ? 'active' : '' %>">
         <%= link_to album_path(album) do %>
-          <%= cl_image_tag 'ph-web/IMG_6138_polarr_rxfcpg', class: "d-block w-100", alt: "First slide" %>
-        <% end %>
-      </div>
-      <div class="carousel-item">
-        <%= link_to album_path(album) do %>
-          <%= cl_image_tag album.cover.key, class: "d-block w-100", alt: "Second slide" %>
-          <%#= cl_image_tag 'ph-web/ppetmpdup_2_dh2ybu', class: "d-block w-100", alt: "Third slide" %>
-        <% end %>
-      </div>
-      <div class="carousel-item">
-        <%= link_to album_path(album) do %>
-        <h3><%= album.title %></h3>
-          <%= cl_image_tag album.cover.key, class: "d-block w-100", alt: "Second slide" %>
+          <%= cl_image_tag album.cover.key, class: "d-block w-100" %>
         <% end %>
       </div>
     <% end %>
   </div>
 </div>
+
+<script type="text/javascript">
+  $(document).on('turbolinks:load', function () {
+    $('.carousel').carousel({
+      interval: 2000
+    });
+  });
+</script>
+

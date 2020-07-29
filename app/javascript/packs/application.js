@@ -3,6 +3,7 @@ import 'bootstrap';
 
 // Internal libraries
  import { readMore } from '../plugins/read_more';
+import { slideCarousel } from '../plugins/carousel';
 
 // This file is automatically compiled by Webpack, along with any other files
 // present in this directory. You're encouraged to place your actual application logic in
@@ -24,4 +25,5 @@ require("channels")
 
 document.addEventListener('turbolinks:load', () => {
   readMore();
+  slideCarousel();
 });

@@ -3,8 +3,6 @@ class PagesController < ApplicationController
 
   def home
     @albums = policy_scope(Album).order(created_at: :desc)
-    #@album = Album.find(params[:id])
-    # @cover = @album.cover
   end
 
   def about
