@@ -1,7 +1,7 @@
 RailsAdmin.config do |config|
 
   ### Popular gems integration
-  config.main_app_name = ["Photo Portofolio Backend", "BackOffice"]
+  config.main_app_name = ["Portofolio", "BackEnd"]
   ## == Devise ==
   config.authenticate_with do
     warden.authenticate! scope: :user
