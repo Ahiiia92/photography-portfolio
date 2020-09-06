@@ -1,7 +1,7 @@
 RailsAdmin.config do |config|
 
   ### Popular gems integration
-
+  config.main_app_name = ["Photo Portofolio Backend", "BackOffice"]
   ## == Devise ==
   config.authenticate_with do
     warden.authenticate! scope: :user
@@ -30,18 +30,21 @@ RailsAdmin.config do |config|
   # config.show_gravatar = true
 
   config.actions do
+    # root actions
     dashboard                     # mandatory
+    # collection actions
     index                         # mandatory
     new
     export
+    history_index
     bulk_delete
+    # member actions
     show
     edit
     delete
+    history_show
     show_in_app
 
-    ## With an audit adapter, you can add:
-    # history_index
-    # history_show
+    grid                          # RailsAdminGrid
   end
 end
