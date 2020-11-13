@@ -1,9 +1,9 @@
 require "application_system_test_case"
 
 class AlbumsTest < ApplicationSystemTestCase
-  test "visiting the albums" do
-    visit "/albums"
-    assert_selector "h1", text: "Portfolio"
+  test 'visiting the albums' do
+    visit '/albums'
+    assert_equal albums_path, page.current_path
   end
 
   # test "let's a signed in an admin user create a new album" do
