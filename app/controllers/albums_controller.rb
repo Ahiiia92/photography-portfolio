@@ -8,6 +8,7 @@ class AlbumsController < ApplicationController
   def show
     set_album
     authorize @album
+    @category = @album.category
   end
 
   def new

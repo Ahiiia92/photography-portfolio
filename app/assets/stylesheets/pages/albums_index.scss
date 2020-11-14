@@ -51,8 +51,7 @@ section {
 
   h1 {
     font-family: 'Raleway';
-    font-weight: bold;
-    font-size: 42px;
+    font-size: 30px;
   }
 }
 
@@ -334,6 +333,16 @@ a {
   }
 }
 
+.category {
+  color: #313131;
+  position: absolute;
+  bottom: -2.5rem;
+  font-style: italic;
+  font-family: Arapey, "Times New Roman", Times, serif;
+  font-size: 1.2em;
+  text-decoration: line-through;
+}
+
 .card-index-info {
   position: relative;
   z-index: 3;
@@ -351,8 +360,9 @@ a {
   // text-decoration: none;
   h3 {
     margin: 0px;
-    font-weight: 500;
     color: transparent;
+    font-weight: 300;
+    font-style: italic;
   }
 
   p {
@@ -362,6 +372,7 @@ a {
     color: transparent;
     text-align: center;
     padding-bottom: 20px;
+    font-weight: 300;
   }
 
   .info {
@@ -372,7 +383,8 @@ a {
   &:hover {
     text-decoration: none;
 
-    p, h3 {
+    p,
+    h3 {
       color: white;
     }
   }

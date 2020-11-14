@@ -18,13 +18,9 @@
         <section>
           <div class="container">
             <!--  portfolio header -->
-            <div class="content-logo">
-              <%= image_tag 'logo-120x120-round.png' %>
-            </div>
-            <h1 >Portfolio</h1>
-            <div class="block">
+            <h1>PORTFOLIO</h1>
               <div class="content">
-                <h3 class="subtitle js-excerpt excerpt-hidden" style="color:#000; margin: 10px 25px;">“All men have stars, but they are not the same things for different people. For some, who are travelers, the stars are
+                <h3 class="subtitle" style="color:#000; margin: 10px 25px;">“All men have stars, but they are not the same things for different people. For some, who are travelers, the stars are
                 guides. For others they are no more than little lights in the sky. For others, who are scholars, they are problems...
                 But all these stars are silent. You-You alone will have stars as no one else has them... In one of the stars I shall be
                 living. In one of them I shall be laughing. And so it will be as if all the stars will be laughing when you look at the
@@ -37,8 +33,6 @@
                 <p>― Antoine de Saint-Exupéry, The Little Prince</p>
                 </h3>
               </div>
-              <a role="button" class="js-read-more" href="#">Read More</a>
-            </div>
 
             <div class="grid">
               <% @albums.each do |album| %>
@@ -51,16 +45,9 @@
                       <!-- <button>More</button> -->
                     </div>
                   <% end %>
+                  <p class="category"><%= album.category %></p>
                 </div>
               <% end %>
-
-                  <!-- <% @albums.each do |album| %>
-                  <div class="card-bottom">
-                    <%= link_to album_path(album) do %>
-                    <%= cl_image_tag album.cover.key, class: "grid-picture" %>
-                    <% end %>
-                  </div>
-                  <% end %> -->
             </div>
               </div>
             </div>
