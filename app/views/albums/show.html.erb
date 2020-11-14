@@ -41,9 +41,7 @@
                 <ul class="project-details">
                   <li><i class="fas fa-hashtag"></i>
                     <h5 class="card-photo-infos-list">Category:
-                      <% @album.each do |tag| %>
-                        <%= tag.category %>
-                      <% end %>
+                      <%= @album.category %>
                     </h5>
                   </li>
                   <li><i class="far fa-calendar-alt"></i>

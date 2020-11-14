@@ -18,6 +18,14 @@
   z-index: 2;
   float: left;
   background: #f9f9f9;
+
+  a {
+    color: #666;
+  }
+
+  &:hover {
+    color: #666;
+  }
 }
 
 section {
