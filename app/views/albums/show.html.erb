@@ -13,19 +13,23 @@
     <!-- portfolio counter  end-->
 
     <!--=============== content ===============-->
-    <div class="content">
+    <div class="content" id="content-show-album">
       <div class="container gallery-show d-flex justify-content-center">
         <div class="row align-items-center justify-content-between">
           <div class="col-sm-12 col-7 col-lg-8 album-show">
             <div class="card-photo">
               <h3>Photo</h3>
               <ul class="list-inline">
-                <% @album.photos.each do |image| %>
-                  <li class="list-inline-item"><%= cl_image_tag image.key %></li>
-                <%end %>
+                <% if !@album.photos.attached? %>
+                  <% 6.times do %>
+                    <li class="list-inline-item"><%= image_tag('https://picsum.photos/700/500') %></li>
+                  <% end %>
+                <% else %>
+                  <% @album.photos.each do |image| %>
+                    <li class="list-inline-item"><%= cl_image_tag image.key %></li>
+                  <%end %>
+                <% end %>
                 <!-- <li class="list-inline-item"><%= cl_image_tag 'ph-web/IMG_6060_polarr_od7lxq' %></li>
-                <li class="list-inline-item"><%= cl_image_tag 'ph-web/Z51dbYxA9A8A2NWL9TkfJxoB' %></li>
-                <li class="list-inline-item"><%= cl_image_tag 'ph-web/berlin.jpg' %></li>
                 <li class="list-inline-item"><%= cl_image_tag 'ph-web/ADroQgdoGFWDKLFsAnjf3YFe' %></li> -->
                 <br>
               </ul>
