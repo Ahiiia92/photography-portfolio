@@ -1,3 +1,4 @@
+require 'pry-byebug'
 class AlbumsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
@@ -8,7 +9,11 @@ class AlbumsController < ApplicationController
   def show
     set_album
     authorize @album
-    @category = @album.category
+    if @category != nil
+      @category = @album.category
+    else
+      @category = 'Undefined'
+    end
   end
 
   def new
