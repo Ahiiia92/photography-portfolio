@@ -1,7 +1,8 @@
 RailsAdmin.config do |config|
 
   ### Popular gems integration
-  config.main_app_name = ["Portofolio", "BackEnd"]
+  # config.main_app_name = ["Website", "Backend"]
+  config.main_app_name = Proc.new { |controller| [ "Website", "BackOffice - #{controller.params[:action].try(:titleize)}" ] }
   ## == Devise ==
   config.authenticate_with do
     warden.authenticate! scope: :user
@@ -29,7 +30,7 @@ RailsAdmin.config do |config|
   ## To disable Gravatar integration in Navigation Bar set to false
   # config.show_gravatar = true
 
-   config.included_models = [ "Album", "User" ]
+  config.included_models = [ "Album", "User" ]
 
   config.actions do
     # root actions
@@ -46,7 +47,5 @@ RailsAdmin.config do |config|
     delete
     history_show
     show_in_app
-
-    grid                          # RailsAdminGrid
   end
 end
