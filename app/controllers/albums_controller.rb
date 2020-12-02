@@ -2,8 +2,25 @@
 class AlbumsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
+  CATEGORY = [
+  'Nature',
+  'Urban',
+  'Wedding',
+  'Black & White',
+  'Travel',
+  'LifeStyle',
+  'Party',
+  'Portrait',
+  'Night'
+]
+
   def index
     @albums = policy_scope(Album).order(created_at: :desc)
+    if @category != nil
+      @category = @album.category
+    else
+      @category = 'Undefined'
+    end
   end
 
   def show
