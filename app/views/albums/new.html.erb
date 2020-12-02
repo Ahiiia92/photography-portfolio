@@ -1,8 +1,0 @@
-<h1>Albums#new</h1>
-<p>Find me in app/views/albums/new.html.erb</p>
-
-<%= simple_form_for(album) do |f| %>
-  <!-- [...] -->
-  <%= f.input :cover, as: :file %>
-  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-<% end %>
