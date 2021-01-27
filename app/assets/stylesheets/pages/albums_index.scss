@@ -348,7 +348,9 @@ a {
   font-style: italic;
   font-family: Arapey, "Times New Roman", Times, serif;
   font-size: 1.2em;
-  text-decoration: line-through;
+  text-decoration-line: line-through;
+  text-decoration-color: rgba(49, 49, 49, 0.3);
+  text-decoration-thickness: 1px;
 }
 
 .card-index-info {
