@@ -15,10 +15,10 @@ class AlbumsController < ApplicationController
 
   def index
     @albums = policy_scope(Album).order(created_at: :desc)
-    if @category == nil
-      @category = 'Undefined'
-    else
+    if @category != nil
       @category = @album.category
+    else
+      return @category = 'Undefined'
     end
   end
 
@@ -28,7 +28,7 @@ class AlbumsController < ApplicationController
     if @category != nil
       @category = @album.category
     else
-      @category = 'Undefined'
+      return @category = 'Undefined'
     end
   end
 
