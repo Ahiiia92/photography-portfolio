@@ -8,7 +8,7 @@ Album.destroy_all
 User.create!(
   username: "marou",
   password: 123456,
-  email: "marou@marou.de",
+  email: "m@m.de",
   admin: true
 )
 
