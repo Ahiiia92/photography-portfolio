@@ -1,4 +1,3 @@
-# require 'pry-byebug'
 class AlbumsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
@@ -78,7 +77,15 @@ class AlbumsController < ApplicationController
   private
 
   def album_params
-    params.require(:album).permit(:title, :date, :city, :country, :quote, :category, :description, :cover, photos: [])
+    params.require(:album).permit(:title,
+      :date,
+      :city,
+      :country,
+      :quote,
+      :category,
+      :description,
+      :cover,
+      photos: [])
   end
 
   def set_album

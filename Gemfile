@@ -17,8 +17,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.6.1'
 gem 'simple_form'
-gem 'rails_admin', '~> 2.0'
-gem 'rails_admin_rollincode', '~> 1.0'
+gem 'activeadmin'
 gem 'bootsnap', '>= 1.4.2', require: false
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'

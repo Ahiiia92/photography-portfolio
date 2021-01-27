@@ -44,3 +44,5 @@ puts 'Creating 5 Albums'
 end
 
 puts 'Albums ==> Done'
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
+AdminUser.create!(email: 'm@m.fr', password: 'password', password_confirmation: 'password') if Rails.env.development?
