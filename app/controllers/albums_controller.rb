@@ -15,30 +15,21 @@ class AlbumsController < ApplicationController
 
   def index
     @albums = policy_scope(Album).order(created_at: :desc)
-    # TODO: migrate the new
-    @category = @album.category
-    if @album.category.nil?
-      @album.category = 'Undefined'
+    if !@category.nil?
+      @category = @album.category
+    else
+      return @category = 'Undefined'
     end
-    # if !@category.nil?
-    #   @category = @album.category
-    # else
-    #   return @category = 'Undefined'
-    # end
   end
 
   def show
     set_album
     authorize @album
-    @category = @album.category
-    if @album.category.nil?
-      @album.category = 'Undefined'
+    if !@category.nil?
+      @category = @album.category
+    else
+      return @category = 'Undefined'
     end
-    # if !@category.nil?
-    #   @category = @album.category
-    # else
-    #   return @category = 'Undefined'
-    # end
   end
 
   def new
