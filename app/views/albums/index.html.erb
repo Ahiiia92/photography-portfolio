@@ -45,7 +45,13 @@
                       <!-- <button>More</button> -->
                     </div>
                   <% end %>
-                  <p class="category"><%= album.category %></p>
+                  <% if album.category != nil %>
+                    <p class="category"><%= album.category %></p>
+                  <% else %>
+                    <p class="category">
+                      Undefined
+                    </p>
+                  <% end %>
                 </div>
               <% end %>
             </div>
