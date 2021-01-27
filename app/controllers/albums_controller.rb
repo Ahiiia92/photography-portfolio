@@ -15,21 +15,29 @@ class AlbumsController < ApplicationController
 
   def index
     @albums = policy_scope(Album).order(created_at: :desc)
-    if @category != nil
-      @category = @album.category
-    else
-      return @category = 'Undefined'
+    @category = @album.category
+    if @album.category.nil?
+      @album.category = 'Undefined'
     end
+    # if !@category.nil?
+    #   @category = @album.category
+    # else
+    #   return @category = 'Undefined'
+    # end
   end
 
   def show
     set_album
     authorize @album
-    if @category != nil
-      @category = @album.category
-    else
-      return @category = 'Undefined'
+    @category = @album.category
+    if @album.category.nil?
+      @album.category = 'Undefined'
     end
+    # if !@category.nil?
+    #   @category = @album.category
+    # else
+    #   return @category = 'Undefined'
+    # end
   end
 
   def new
