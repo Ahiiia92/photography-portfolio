@@ -27,7 +27,7 @@ CATEGORY = [
 
 puts 'Creating 5 Albums'
 5.times do |i|
-  file = URI.open('https://giantbomb1.cbsistatic.com/uploads/original/9/99864/2419866-nes_console_set.png')
+  file = URI.open('https://picsum.photos/200/300.jpg')
   album = Album.create!(
     title: Faker::Book.title,
     description: Faker::Lorem.paragraph,
